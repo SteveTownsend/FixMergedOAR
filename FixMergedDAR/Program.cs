@@ -4,7 +4,7 @@ using Mutagen.Bethesda.Synthesis;
 using Mutagen.Bethesda.Skyrim;
 using System.Threading.Tasks;
 
-namespace FixMergedDAR
+namespace FixMergedOAR
 {
     public class Program
     {
@@ -26,12 +26,14 @@ namespace FixMergedDAR
         }
         private static MergeInfo? _mergeInfo;
         private static DARConditions? _darConditions;
+        private static OARConditions? _oarConditions;
 
         public static void RunPatch(IPatcherState<ISkyrimMod, ISkyrimModGetter> state)
         {
             _state = state;
             _mergeInfo = new MergeInfo(settings.InputFolder);
             _darConditions = new DARConditions(settings.InputFolder, _mergeInfo);
+            _oarConditions = new OARConditions(settings.InputFolder, _mergeInfo);
         }
     }
 }

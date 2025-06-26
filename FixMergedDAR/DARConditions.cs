@@ -2,14 +2,14 @@
 using System.IO;
 using System.Collections.Generic;
 
-namespace FixMergedDAR
+namespace FixMergedOAR
 {
     public class DARConditions
     {
         public ISet<string> ConditionsPaths { get; } = new HashSet<string>();
         static readonly string PluginTag = ".esp";
         static readonly string FormIDStart = "0x";
-        static readonly string FormIDEnd = ")";
+        static readonly char[] FormIDEnd = "),".ToCharArray();
 
         public DARConditions(string inputFolder, MergeInfo mergeInfo)
         {
@@ -70,7 +70,7 @@ namespace FixMergedDAR
                                 if (offset != -1)
                                 {
                                     int start = offset + FormIDStart.Length;
-                                    int end = line.IndexOf(FormIDEnd, start);
+                                    int end = line.IndexOfAny(FormIDEnd, start);
                                     if (end != -1)
                                     {
                                         string formID = line.Substring(start, end - start);
