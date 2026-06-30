@@ -9,7 +9,8 @@ namespace FixMergedOAR
         [SynthesisTooltip("This must be a valid path on your computer. Typically this points to the mod directory in your Mod Manager VFS, e.g. 'D:/ModdedSkyrim/mods'.")]
         [SynthesisDescription("Path to be scanned for merged plugins and DAR _conditions.txt files.")]
         //public string InputFolder { get; set; } = "";
-        public string InputFolder { get; set; } = "J:\\SteamLibrary\\steamapps\\common\\Skyrim Special Edition\\Data";
+        public string InputFolder { get; set; } = "J:/SteamLibrary/steamapps/common/Skyrim Special Edition/Data";
+        //public string InputFolder { get; set; } = "j:/OmegaLOTD/Tools/Mods";
 
         [SynthesisSettingName("Output Folder")]
         [SynthesisTooltip("This must be a valid path on your computer. Typically this points to a new mod directory in your Mod Manager VFS, e.g. 'D:/ModdedSkyrim/mods/FIx Merged DAR'.")]

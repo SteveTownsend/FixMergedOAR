@@ -1,5 +1,5 @@
-# FixMergedDAR
-Regenerates DAR Conditions files for plugins that have been merged using ZMerge.
+# FixMergedOAR
+Regenerates OAR/DAR Conditions files for plugins that have been merged using ZMerge.
 
 ZMerge always alters the plugin name containing formIDs referenced, and depending on the merge
 may also alter the Form ID. This patcher generates a new set of \_conditions.txt files for 

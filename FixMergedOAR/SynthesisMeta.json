@@ -4,5 +4,14 @@
   "OneLineDescription": "OAR/DAR ZMerge Fixup",
   "LongDescription": "Produce patched conditions.txt files where they contain Plugins and FormIDs that are now in a ZMerged plugin.",
   "PreferredAutoVersioning": "Default",
-  "RequiredMods": []
+  "RequiredMods": [],
+  "TargetedReleases": [
+    "SkyrimLE",
+    "SkyrimSE",
+    "SkyrimVR",
+    "EnderalLE",
+    "EnderalSE",
+    "SkyrimSEGog",
+    "EnderalSEGog"
+  ]
 }
